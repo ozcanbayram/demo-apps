@@ -1,6 +1,15 @@
+import 'package:delivery_app/core/const/project_colors.dart';
+import 'package:delivery_app/core/const/project_texts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'theme/theme.dart';
 
 void main() {
+  // Status bar rengini ve ikonlarının rengi
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: ProjectColors.transparant,
+    statusBarIconBrightness: Brightness.dark,
+  ));
   runApp(const MyApp());
 }
 
@@ -10,12 +19,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      title: ProjectTexts.appName,
+      theme: lightTheme, // Temayı burada kullanın
+      home: const MyHomePage(title: 'Delivery App'),
     );
   }
 }
@@ -41,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
       body: Center(
