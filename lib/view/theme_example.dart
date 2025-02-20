@@ -1,4 +1,6 @@
+import 'package:delivery_app/core/const/project_colors.dart';
 import 'package:delivery_app/core/const/project_texts.dart';
+import 'package:delivery_app/product/custom/custom_large_button.dart';
 import 'package:flutter/material.dart';
 
 // Bu safa temadaki bazı temel deişikliklerin görünmü var. Ve bu saya daha sonra ilinecek.
@@ -42,8 +44,16 @@ class _ThemeExamlViewState extends State<ThemeExamlView> {
             Text('titleLarge', style: Theme.of(context).textTheme.titleLarge),
             Text('titleMedium', style: Theme.of(context).textTheme.titleMedium),
             Text('titleSmall', style: Theme.of(context).textTheme.titleSmall),
-            ElevatedButton(onPressed: () {}, child: Text('data')),
-           
+            CustomLargeButton(
+              onPressed: () {},
+              title: 'Button 1',
+            ),
+            CustomLargeButton(
+              onPressed: () {},
+              bgColor: ProjectColors.white,
+              frColor: ProjectColors.primary,
+              title: 'Button 2',
+            ),
           ],
         ),
       ),

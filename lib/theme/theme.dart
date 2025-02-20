@@ -37,8 +37,13 @@ final ThemeData lightTheme = ThemeData(
     style: ButtonStyle(
       backgroundColor: WidgetStateProperty.all(ProjectColors.primary),
       foregroundColor: WidgetStateProperty.all(ProjectColors.white),
-      side: WidgetStateProperty.all(BorderSide(
-          width: 1.0, color: ProjectColors.primary, style: BorderStyle.solid)),
+      side: WidgetStateProperty.all(
+        BorderSide(
+          width: 1.0,
+          // color: ProjectColors.transparant,
+          // style: BorderStyle.solid,
+        ),
+      ),
       shape: WidgetStateProperty.all(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(30.0)),
