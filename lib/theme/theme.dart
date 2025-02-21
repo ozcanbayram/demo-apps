@@ -1,3 +1,4 @@
+import 'package:delivery_app/core/const/core_sizes.dart';
 import 'package:delivery_app/core/const/project_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,6 +15,10 @@ final ThemeData lightTheme = ThemeData(
         fontWeight: FontWeight.bold,
         color: ProjectColors.textPrimary),
     bodyLarge: TextStyle(fontSize: 16.0, color: Colors.black),
+    headlineLarge: TextStyle(
+        fontSize: CoreSizes.headlineLargeSize,
+        fontWeight: FontWeight.bold,
+        color: ProjectColors.white),
   ),
 
   //! AppBar action button theme
@@ -37,13 +42,11 @@ final ThemeData lightTheme = ThemeData(
     style: ButtonStyle(
       backgroundColor: WidgetStateProperty.all(ProjectColors.primary),
       foregroundColor: WidgetStateProperty.all(ProjectColors.white),
-      side: WidgetStateProperty.all(
-        BorderSide(
-          width: 1.0,
-          // color: ProjectColors.transparant,
-          // style: BorderStyle.solid,
-        ),
-      ),
+      // side: WidgetStateProperty.all(
+      //   BorderSide(
+      //        width: 1.0,
+      //        color: ProjectColors.transparant,
+      //        style: BorderStyle.solid),),
       shape: WidgetStateProperty.all(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(30.0)),

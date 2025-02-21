@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'theme/theme.dart';
 
 void main() {
-  // Status bar rengini ve ikonlarının rengi
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: ProjectColors.transparant,
     statusBarIconBrightness: Brightness.dark,
@@ -16,13 +15,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: ProjectTexts.appName,
-      theme: lightTheme, // Temayı burada kullanın
+      theme: lightTheme,
       home: ThemeExamlView(),
     );
   }

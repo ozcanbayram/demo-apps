@@ -17,9 +17,9 @@ class CustomLargeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: CustomPadding.customOnly(),
+      padding: CustomPadding.customOnlyMedium(),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: bgColor,
           foregroundColor: frColor,
