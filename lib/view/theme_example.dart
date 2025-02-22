@@ -1,6 +1,7 @@
 import 'package:delivery_app/core/const/project_colors.dart';
 import 'package:delivery_app/core/const/project_texts.dart';
 import 'package:delivery_app/product/custom/custom_large_button.dart';
+import 'package:delivery_app/view/login_view.dart';
 import 'package:delivery_app/view/onboard_view.dart';
 import 'package:flutter/material.dart';
 
@@ -59,10 +60,19 @@ class _ThemeExamlViewState extends State<ThemeExamlView> {
               title: 'Onboard View',
             ),
             CustomLargeButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const LoginView();
+                    },
+                  ),
+                );
+              },
               bgColor: ProjectColors.white,
               frColor: ProjectColors.primary,
-              title: 'Button 2',
+              title: 'Login View',
             ),
           ],
         ),

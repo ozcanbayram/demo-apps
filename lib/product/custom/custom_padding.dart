@@ -19,4 +19,11 @@ class CustomPadding extends EdgeInsets {
           left: 32,
           right: 32,
         );
+  const CustomPadding.customOnlyLarge()
+      : super.only(
+          top: 32,
+          bottom: 32,
+          left: 32,
+          right: 32,
+        );
 }
