@@ -2,6 +2,7 @@ import 'package:delivery_app/core/const/project_colors.dart';
 import 'package:delivery_app/core/enums/image_enum.dart';
 import 'package:delivery_app/product/custom/custom_large_button.dart';
 import 'package:delivery_app/product/custom/custom_padding.dart';
+import 'package:delivery_app/view/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatefulWidget {
@@ -67,7 +68,16 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const SignupView();
+                            },
+                          ),
+                        );
+                      },
                       child: Text(
                         'Sign-up',
                         style: Theme.of(context).textTheme.titleMedium,
