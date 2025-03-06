@@ -54,4 +54,18 @@ final ThemeData lightTheme = ThemeData(
       ),
     ),
   ),
+
+  //! TextField theme
+  inputDecorationTheme: const InputDecorationTheme(
+    labelStyle: TextStyle(color: ProjectColors.textSecondary),
+    border: UnderlineInputBorder(
+      borderSide: BorderSide(color: ProjectColors.primary),
+    ),
+    enabledBorder: UnderlineInputBorder(
+      borderSide: BorderSide(color: ProjectColors.textSecondary),
+    ),
+    focusedBorder: UnderlineInputBorder(
+      borderSide: BorderSide(color: ProjectColors.primary, width: 2.0),
+    ),
+  ),
 );

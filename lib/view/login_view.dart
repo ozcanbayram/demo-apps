@@ -96,41 +96,13 @@ class _LoginViewState extends State<LoginView> {
                 children: [
                   TextField(
                     controller: _emailController,
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      labelStyle: TextStyle(color: ProjectColors.textSecondary),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: ProjectColors.primary),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide:
-                            BorderSide(color: ProjectColors.textSecondary),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                            color: ProjectColors.primary, width: 2.0),
-                      ),
-                    ),
+                    decoration: InputDecoration(labelText: 'Email'),
                   ),
                   const SizedBox(height: 20.0),
                   TextField(
                     controller: _passwordController,
                     obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      labelStyle: TextStyle(color: ProjectColors.textSecondary),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(color: ProjectColors.primary),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide:
-                            BorderSide(color: ProjectColors.textSecondary),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                            color: ProjectColors.primary, width: 2.0),
-                      ),
-                    ),
+                    decoration: InputDecoration(labelText: 'Password'),
                   ),
                   const SizedBox(height: 10.0),
                   Align(
