@@ -98,32 +98,20 @@ class _LoginViewState extends State<LoginView> {
                     controller: _emailController,
                     decoration: InputDecoration(labelText: 'Email'),
                   ),
-                  const SizedBox(height: 20.0),
                   TextField(
                     controller: _passwordController,
                     obscureText: true,
                     decoration: InputDecoration(labelText: 'Password'),
                   ),
-                  const SizedBox(height: 10.0),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: TextButton(
-                      onPressed: () {
-                        // Forgot password action
-                      },
-                      child: Text(
-                        'Forgot Password?',
-                        style: TextStyle(color: ProjectColors.primary),
-                      ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStyle(color: ProjectColors.primary),
                     ),
                   ),
                   const Spacer(), // Boş alanı doldurur
-                  CustomLargeButton(
-                    onPressed: () {
-                      // Login action
-                    },
-                    title: 'Login',
-                  ),
+                  CustomLargeButton(onPressed: () {}, title: 'Login'),
                 ],
               ),
             ),
