@@ -18,104 +18,100 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            // height: MediaQuery.of(context).size.height / 2,
-            // width: double.infinity,
-            decoration: const BoxDecoration(
-              color: ProjectColors.white,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                color: ProjectColors.white,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: ProjectColors.textSecondary,
+                    blurRadius: 5,
+                    spreadRadius: 0,
+                  ),
+                ],
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: ProjectColors.textSecondary,
-                  blurRadius: 5,
-                  spreadRadius: 0,
-                ),
-              ],
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: CustomPadding.customOnlyLarge(),
-                  child: Center(child: ImageEnums.big_chef.toImage),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            'Login',
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(top: 4.0),
-                            height: 3.0,
-                            width: 100.0,
-                            color: ProjectColors.primary,
-                          ),
-                        ],
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return const LoginView(); //! Sign-up sayfasına yönlendirme yapılır
-                            },
-                          ),
-                        );
-                      },
-                      child: Text(
-                        'Sign-up',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: CustomPadding.customOnlyLarge(),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  TextField(
-                    controller: _emailController,
-                    decoration: InputDecoration(labelText: 'Email'),
+                  Padding(
+                    padding: CustomPadding.customOnlyLarge(),
+                    child: Center(child: ImageEnums.big_chef.toImage),
                   ),
-                  TextField(
-                    controller: _passwordController,
-                    obscureText: true,
-                    decoration: InputDecoration(labelText: 'Password'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TextButton(
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Text(
+                              'Login',
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(top: 4.0),
+                              height: 3.0,
+                              width: 100.0,
+                              color: ProjectColors.primary,
+                            ),
+                          ],
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const LoginView();
+                              },
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Sign-up',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                      ),
+                    ],
                   ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: ProjectColors.primary),
-                    ),
-                  ),
-                  const Spacer(), // Boş alanı doldurur
-                  CustomLargeButton(onPressed: () {}, title: 'Login'),
                 ],
               ),
             ),
-          ),
-        ],
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TextField(
+                  controller: _emailController,
+                  decoration: InputDecoration(labelText: 'Email'),
+                ),
+                TextField(
+                  controller: _passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(labelText: 'Password'),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(color: ProjectColors.primary),
+                  ),
+                ),
+                CustomLargeButton(onPressed: () {}, title: 'Login'),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
