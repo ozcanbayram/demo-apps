@@ -1,5 +1,5 @@
 import 'package:delivery_app/core/const/core_sizes.dart';
-import 'package:delivery_app/product/custom/custom_padding.dart';
+import 'package:delivery_app/product/custom/widgets/custom_padding.dart';
 import 'package:flutter/material.dart';
 
 class CustomLargeButton extends StatelessWidget {

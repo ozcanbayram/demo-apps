@@ -1,7 +1,8 @@
 import 'package:delivery_app/core/const/project_colors.dart';
 import 'package:delivery_app/core/enums/image_enum.dart';
-import 'package:delivery_app/product/custom/custom_large_button.dart';
-import 'package:delivery_app/product/custom/custom_padding.dart';
+import 'package:delivery_app/product/custom/widgets/custom_large_button.dart';
+import 'package:delivery_app/product/custom/widgets/custom_padding.dart';
+import 'package:delivery_app/product/custom/widgets/custom_text_files.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatefulWidget {
@@ -86,30 +87,32 @@ class _LoginViewState extends State<LoginView> {
                 ],
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextField(
-                  controller: _emailController,
-                  decoration: InputDecoration(labelText: 'Email'),
-                ),
-                TextField(
-                  controller: _passwordController,
-                  obscureText: true,
-                  decoration: InputDecoration(labelText: 'Password'),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextStyle(color: ProjectColors.primary),
+            Padding(
+              padding: const CustomPadding.customOnlyLarge(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomTextField(
+                    emailController: _emailController,
+                    labelText: 'Email',
+                    obText: false,
                   ),
-                ),
-                CustomLargeButton(onPressed: () {}, title: 'Login'),
-              ],
+                  CustomTextField(
+                    emailController: _passwordController,
+                    labelText: 'Password',
+                    obText: true,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStyle(color: ProjectColors.primary),
+                    ),
+                  ),
+                ],
+              ),
             ),
+            CustomLargeButton(onPressed: () {}, title: 'Login'),
           ],
         ),
       ),

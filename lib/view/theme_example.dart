@@ -1,6 +1,6 @@
 import 'package:delivery_app/core/const/project_colors.dart';
 import 'package:delivery_app/core/const/project_texts.dart';
-import 'package:delivery_app/product/custom/custom_large_button.dart';
+import 'package:delivery_app/product/custom/widgets/custom_large_button.dart';
 import 'package:delivery_app/view/login_view.dart';
 import 'package:delivery_app/view/onboard_view.dart';
 import 'package:flutter/material.dart';
