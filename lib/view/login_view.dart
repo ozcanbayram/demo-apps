@@ -2,6 +2,7 @@ import 'package:delivery_app/core/const/project_colors.dart';
 import 'package:delivery_app/core/enums/image_enum.dart';
 import 'package:delivery_app/product/custom/widgets/custom_large_button.dart';
 import 'package:delivery_app/product/custom/widgets/custom_padding.dart';
+import 'package:delivery_app/product/custom/widgets/custom_text_button.dart';
 import 'package:delivery_app/product/custom/widgets/custom_text_files.dart';
 import 'package:flutter/material.dart';
 
@@ -49,24 +50,13 @@ class _LoginViewState extends State<LoginView> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      TextButton(
+                      CustomTextButton(
+                        title: 'Login',
                         onPressed: () {},
-                        child: Column(
-                          children: [
-                            Text(
-                              'Login',
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(top: 4.0),
-                              height: 3.0,
-                              width: 100.0,
-                              color: ProjectColors.primary,
-                            ),
-                          ],
-                        ),
+                        selectedMaker: true,
                       ),
-                      TextButton(
+                      CustomTextButton(
+                        title: 'Sign-up',
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -77,10 +67,7 @@ class _LoginViewState extends State<LoginView> {
                             ),
                           );
                         },
-                        child: Text(
-                          'Sign-up',
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
+                        selectedMaker: false,
                       ),
                     ],
                   ),
@@ -102,13 +89,11 @@ class _LoginViewState extends State<LoginView> {
                     labelText: 'Password',
                     obText: true,
                   ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: ProjectColors.primary),
-                    ),
-                  ),
+                  CustomTextButton(
+                      onPressed: () {},
+                      title: 'Forgot Password?',
+                      selectedMaker: false,
+                      color: ProjectColors.primary),
                 ],
               ),
             ),
