@@ -1,9 +1,11 @@
 import 'package:delivery_app/core/const/project_colors.dart';
-import 'package:delivery_app/core/enums/image_enum.dart';
+import 'package:delivery_app/product/custom/functions/custom_navigator.dart';
+import 'package:delivery_app/product/custom/widgets/custom_container.dart';
 import 'package:delivery_app/product/custom/widgets/custom_large_button.dart';
 import 'package:delivery_app/product/custom/widgets/custom_padding.dart';
 import 'package:delivery_app/product/custom/widgets/custom_text_button.dart';
-import 'package:delivery_app/product/custom/widgets/custom_text_files.dart';
+import 'package:delivery_app/product/custom/widgets/custom_text_field.dart';
+import 'package:delivery_app/view/sign_up_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatefulWidget {
@@ -17,62 +19,32 @@ class _LoginViewState extends State<LoginView> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  bool loginPressed = true;
+  bool signUpPressed = false;
+
+  _changeSelectedMaker() {
+    setState(() {
+      loginPressed = !loginPressed;
+      signUpPressed = !signUpPressed;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: ProjectColors.white,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: ProjectColors.textSecondary,
-                    blurRadius: 5,
-                    spreadRadius: 0,
-                  ),
-                ],
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: CustomPadding.customOnlyLarge(),
-                    child: Center(child: ImageEnums.big_chef.toImage),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CustomTextButton(
-                        title: 'Login',
-                        onPressed: () {},
-                        selectedMaker: true,
-                      ),
-                      CustomTextButton(
-                        title: 'Sign-up',
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return const LoginView();
-                              },
-                            ),
-                          );
-                        },
-                        selectedMaker: false,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+            CustomContainer(
+              loginSelected: loginPressed,
+              signUpSelected: signUpPressed,
+              loginPressed: () {
+                _changeSelectedMaker();
+              },
+              signUpPressed: () {
+                navigateTo(context, const SignUpView());
+                _changeSelectedMaker();
+              },
             ),
             Padding(
               padding: const CustomPadding.customOnlyLarge(),
