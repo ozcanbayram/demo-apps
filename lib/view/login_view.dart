@@ -36,16 +36,13 @@ class _LoginViewState extends State<LoginView> {
         child: Column(
           children: [
             CustomContainer(
-              loginSelected: loginPressed,
-              signUpSelected: signUpPressed,
-              loginPressed: () {
-                _changeSelectedMaker();
-              },
-              signUpPressed: () {
-                navigateTo(context, const SignUpView());
-                _changeSelectedMaker();
-              },
-            ),
+                loginSelected: loginPressed,
+                signUpSelected: signUpPressed,
+                loginPressed: () {},
+                signUpPressed: () {
+                  navigateAndClose(context, const SignUpView());
+                  _changeSelectedMaker();
+                }),
             Padding(
               padding: const CustomPadding.customOnlyLarge(),
               child: Column(

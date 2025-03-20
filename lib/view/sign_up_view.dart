@@ -31,7 +31,7 @@ class _SignUpViewState extends State<SignUpView> {
               loginSelected: loginPressed,
               signUpSelected: signUpPressed,
               loginPressed: () {
-                navigateTo(context, const LoginView());
+                navigateAndClose(context, const LoginView());
                 _changeSelectedMaker();
               },
               signUpPressed: () {},
