@@ -1,4 +1,5 @@
 import 'package:delivery_app/core/const/project_colors.dart';
+import 'package:delivery_app/core/const/project_texts.dart';
 import 'package:delivery_app/core/enums/image_enum.dart';
 import 'package:delivery_app/product/custom/widgets/custom_padding.dart';
 import 'package:delivery_app/product/custom/widgets/custom_text_button.dart';
@@ -48,12 +49,12 @@ class CustomContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CustomTextButton(
-                title: 'Login',
+                title: ProjectTexts.loginButton,
                 onPressed: loginPressed,
                 selectedMaker: loginSelected,
               ),
               CustomTextButton(
-                title: 'Sign-up',
+                title: ProjectTexts.signUpButton,
                 onPressed: signUpPressed,
                 selectedMaker: signUpSelected,
               ),

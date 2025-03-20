@@ -5,6 +5,13 @@ class CustomPadding extends EdgeInsets {
   const CustomPadding.verticalMedium() : super.symmetric(vertical: 16);
   const CustomPadding.horizontalMedium() : super.symmetric(horizontal: 16);
   const CustomPadding.horizontalLarge() : super.symmetric(horizontal: 32);
+  const CustomPadding.customOnlyXsmall()
+      : super.only(
+          top: 0,
+          bottom: 0,
+          left: 32,
+          right: 32,
+        );
   const CustomPadding.customOnlysmall()
       : super.only(
           top: 8,
@@ -23,6 +30,13 @@ class CustomPadding extends EdgeInsets {
       : super.only(
           top: 32,
           bottom: 32,
+          left: 32,
+          right: 32,
+        );
+  const CustomPadding.customOnlyXLarge()
+      : super.only(
+          top: 64,
+          bottom: 64,
           left: 32,
           right: 32,
         );

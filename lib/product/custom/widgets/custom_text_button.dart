@@ -23,9 +23,8 @@ class CustomTextButton extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: color,
-                ),
+            style:
+                Theme.of(context).textTheme.titleMedium?.copyWith(color: color),
           ),
           selectedMaker ? CustomMarker() : SizedBox(),
         ],
