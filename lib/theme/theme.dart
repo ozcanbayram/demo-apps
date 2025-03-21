@@ -4,22 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 final ThemeData lightTheme = ThemeData(
-  scaffoldBackgroundColor: ProjectColors.background,
+  scaffoldBackgroundColor: ProjectColors.backgroundPrimary,
   useMaterial3: true,
   primaryColor: ProjectColors.primary,
 
   //! Text theme
   textTheme: const TextTheme(
-    headlineMedium: TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.bold,
-        color: ProjectColors.textPrimary),
-    bodyLarge: TextStyle(fontSize: 16.0, color: Colors.black),
-    headlineLarge: TextStyle(
-        fontSize: CoreSizes.headlineLargeSize,
-        fontWeight: FontWeight.bold,
-        color: ProjectColors.white),
-  ),
+      headlineMedium: TextStyle(
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+          color: ProjectColors.textPrimary),
+      bodyLarge: TextStyle(fontSize: 16.0, color: Colors.black),
+      headlineLarge: TextStyle(
+          fontSize: CoreSizes.headlineLargeSize,
+          fontWeight: FontWeight.bold,
+          color: ProjectColors.white),
+      displayMedium: TextStyle(fontWeight: FontWeight.bold)),
 
   //! AppBar action button theme
   appBarTheme: AppBarTheme(

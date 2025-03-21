@@ -6,6 +6,7 @@ import 'package:delivery_app/product/custom/widgets/custom_large_button.dart';
 import 'package:delivery_app/product/custom/widgets/custom_padding.dart';
 import 'package:delivery_app/product/custom/widgets/custom_text_button.dart';
 import 'package:delivery_app/product/custom/widgets/custom_text_field.dart';
+import 'package:delivery_app/view/feed_view.dart';
 import 'package:delivery_app/view/sign_up_view.dart';
 import 'package:flutter/material.dart';
 
@@ -56,7 +57,11 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
             CustomLargeButton(
-                onPressed: () {}, title: ProjectTexts.loginButton),
+              onPressed: () {
+                navigateAndClose(context, FeedView());
+              },
+              title: ProjectTexts.loginButton,
+            ),
           ],
         ),
       ),

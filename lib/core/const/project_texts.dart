@@ -9,11 +9,9 @@ class ProjectTexts {
 
   //!      Onboard Texts
   static const String onboardTitle = 'Food For \nEveryone';
-
-  //!      Button Texts
   static const String getSartedButton = 'Get Started';
 
-  //!     Register Texts
+  //!       Register Texts
   static const String loginButton = 'Login';
   static const String signUpButton = 'Sign-up';
   static const String fullName = 'Full Name';
@@ -21,4 +19,8 @@ class ProjectTexts {
   static const String password = 'Password';
   static const String passwordAgain = 'Password Again';
   static const String forgotPassword = 'Forgot Password?';
+
+  //!       Feed Texts
+  static const String feedTitle = 'Delicious\nfood for you';
+  static const String searchField = 'Search';
 }
