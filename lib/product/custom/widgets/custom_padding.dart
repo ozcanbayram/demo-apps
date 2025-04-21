@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomPadding extends EdgeInsets {
   const CustomPadding.all() : super.all(16);
+  const CustomPadding.topAndBottom() : super.only(top: 16, bottom: 16);
   const CustomPadding.verticalMedium() : super.symmetric(vertical: 16);
   const CustomPadding.horizontalMedium() : super.symmetric(horizontal: 16);
   const CustomPadding.horizontalLarge() : super.symmetric(horizontal: 32);
