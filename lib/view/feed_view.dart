@@ -19,7 +19,6 @@ class _FeedViewState extends State<FeedView> {
     "Snacks",
     "Desserts",
     "Fruits",
-    "And more...",
   ];
   String selectedCategory = "Food"; // Varsayılan olarak seçili kategori
 
