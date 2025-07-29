@@ -93,6 +93,7 @@ class _SalonOlusturState extends State<SalonOlustur> {
 
     // * Firestore'a veri ekleme işlemi
     await firestore.collection('salonlar').doc(id).set({
+      'active': true, // * Varsayılan olarak aktif
       'id': id,
       'il': _secilenIl,
       'ilce': _secilenIlce,
