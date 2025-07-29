@@ -75,24 +75,33 @@ class _TeknikerState extends State<Tekniker> {
           final role = data['role'] ?? 'Rol yok';
           final manualId = data['id'] ?? 'ID yok';
 
-          return Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Card(
-              child: ListTile(
-                title: Text(name, style: const TextStyle(fontSize: 20)),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 8),
-                    Text('Name: $name'),
-                    Text('Otomotik ID: $id'),
-                    Text('Email: $email'),
-                    Text('Rol: $role'),
-                    Text('Manuel ID: $manualId'),
-                  ],
+          return Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Card(
+                  child: ListTile(
+                    title: Text(name, style: const TextStyle(fontSize: 20)),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const SizedBox(height: 8),
+                        Text('Name: $name'),
+                        Text('Otomotik ID: $id'),
+                        Text('Email: $email'),
+                        Text('Rol: $role'),
+                        Text('Manuel ID: $manualId'),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
+              ElevatedButton(
+                onPressed: _signOut,
+                child: const Text('Salon Oluştur'),
+              ),
+            ],
           );
         },
       ),

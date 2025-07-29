@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
 
         ScaffoldMessenger.of(
           context,
-        ).showSnackBar(SnackBar(content: Text('Giriş başarılı: $role')));
+        ).showSnackBar(SnackBar(content: Text(' $role girişi başarılı')));
 
         if (role == 'hoca') {
           Navigator.pushReplacement(
