@@ -1,4 +1,5 @@
 import 'package:auth_demo/login.dart';
+import 'package:auth_demo/salon_olustur.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -98,7 +99,14 @@ class _TeknikerState extends State<Tekniker> {
                 ),
               ),
               ElevatedButton(
-                onPressed: _signOut,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SalonOlustur(),
+                    ),
+                  );
+                },
                 child: const Text('Salon Oluştur'),
               ),
             ],
