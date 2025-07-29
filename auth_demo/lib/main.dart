@@ -1,4 +1,5 @@
-import 'package:auth_demo/auth_gate.dart';
+//TODO import 'package:auth_demo/auth_gate.dart';
+import 'package:auth_demo/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AuthGate(),
+      home: Login(),
     );
   }
 }
