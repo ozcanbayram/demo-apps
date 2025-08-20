@@ -1,3 +1,4 @@
+import 'package:fetchhing_demo/core/core_methods.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
       home: const MyHomePage(),
     );
   }
@@ -38,7 +36,12 @@ class MyHomePage extends StatelessWidget {
               'Welcome Page',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Go to Main Page')),
+            ElevatedButton(
+              onPressed: () {
+                viewNavigator(context);
+              },
+              child: Text('Go to Main Page'),
+            ),
           ],
         ),
       ),
