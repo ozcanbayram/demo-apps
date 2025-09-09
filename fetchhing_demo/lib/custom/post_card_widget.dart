@@ -17,6 +17,14 @@ class CustomPostCard extends StatelessWidget {
         ),
         subtitle: Text(post.body, maxLines: 2, overflow: TextOverflow.ellipsis),
         trailing: Icon(Icons.chevron_right_outlined),
+        leading: Text(
+          post.id.toString(),
+          style: TextStyle(
+            color: Colors.red,
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
         onTap: () {},
       ),
     );
